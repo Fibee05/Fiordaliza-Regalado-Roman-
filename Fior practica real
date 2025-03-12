@@ -1,0 +1,120 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "3b235828-8a19-4f37-81e1-47dee02c7748",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import cv2 as cv\n",
+    "\n",
+    "# Para cargar la imagen\n",
+    "img_path = \"C:/Users/Owner/Desktop/Fiordaliza/FiordalizaPhoto.jpg\"\n",
+    "lecturaImagen = cv.imread(img_path)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "ec0a423c-0f3b-4aa8-83f1-570bef013c2c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Imagen cargada correctamente.\n"
+     ]
+    }
+   ],
+   "source": [
+    "if lecturaImagen is None:\n",
+    "    print(\"Error: No se pudo cargar la imagen.\")\n",
+    "else:\n",
+    "    print(\"Imagen cargada correctamente.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "c95bfa36-bd31-4029-b3b3-51b8d8233e96",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Para separar la imagen en sus componentes B, G, R\n",
+    "B, G, R = cv.split(lecturaImagen)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "22051cae-ac71-4a03-8f2f-71ccb755f732",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Para mostrar la imagen original y sus componentes\n",
+    "cv.imshow(\"Imagen Original\", lecturaImagen)\n",
+    "cv.imshow(\"Canal Rojo\", R)\n",
+    "cv.imshow(\"Canal Verde\", G)\n",
+    "cv.imshow(\"Canal Azul\", B)\n",
+    "cv.waitKey(0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ebfd1bb9-3948-4df6-81ac-931bc43a4dd3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Para mostrar la imagen original y sus componentes con modificaciones\n",
+    "cv.imshow(\"Imagen Original\", lecturaImagen)\n",
+    "cv.imshow(\"Canal Rojo\", R)  # Corregido: No usar R=G\n",
+    "cv.imshow(\"Canal Verde\", G * 8)\n",
+    "cv.imshow(\"Canal Azul\", B * 10)\n",
+    "cv.waitKey(0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "43e37c0e-f27f-4046-b4a2-520f3436219e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Para cerrar todas las ventanas\n",
+    "cv.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "37a9c7c6-c830-4af0-b5c5-dbaf13edc79e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

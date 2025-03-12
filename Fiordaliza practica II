@@ -1,0 +1,107 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "1c9fbcce-997d-4fee-930e-324132be26cf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Imagen cargada correctamente.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Para importar openCv\n",
+    "import cv2 as cv\n",
+    "\n",
+    "# Para cargar la imagen\n",
+    "img_path = \"C:/Users/Owner/Desktop/Fiordaliza/FiordalizaPhoto.jpg\"\n",
+    "lecturaImagen = cv.imread(img_path)\n",
+    "\n",
+    "#Para verificar si la carga fue exitosa\n",
+    "if lecturaImagen is None:\n",
+    "    print(\"Error: No se pudo cargar la imagen.\")\n",
+    "else:\n",
+    "    print(\"Imagen cargada correctamente.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "da67e768-0440-483b-a9d8-41e3ebf6605a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Para separar la imagen en sus componentes B, G, R\n",
+    "B, G, R = cv.split(lecturaImagen)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5878f9bb-7041-4bf0-991c-03829c1ec6b3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Para mostrar la imagen original y sus componentes\n",
+    "cv.imshow(\"Imagen Original\", lecturaImagen)\n",
+    "cv.imshow(\"Canal Rojo\", R)\n",
+    "cv.imshow(\"Canal Verde\", G)\n",
+    "cv.imshow(\"Canal Azul\", B)\n",
+    "#Esperar y cerrar ventanas\n",
+    "cv.waitKey(0)\n",
+    "cv.destroyAllWindows()\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8670f45b-83e2-4c45-9f59-b0dde80488a9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Para mostrar la imagen original y sus componentes pero son modificaciones \n",
+    "cv.imshow(\"Imagen Original\", lecturaImagen)\n",
+    "cv.imshow(\"Canal Rojo\", R=G)\n",
+    "cv.imshow(\"Canal Verde\", G * 8)\n",
+    "cv.imshow(\"Canal Azul\", B * 10 )\n",
+    "cv.waitKey(0)\n",
+    "cv.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "adeedf81-8873-464b-9b14-707a9799ca64",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
