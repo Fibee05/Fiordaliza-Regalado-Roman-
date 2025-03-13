@@ -13,7 +13,7 @@ El objetivo de esta práctica es demostrar varias técnicas de procesamiento de 
 5. Transformaciones avanzadas (rotación, perspectiva, máscaras de transparencia).
 
 
-# Estructura del Código
+## Estructura del Código
 
 El código está organizado en los siguientes pasos:
 
@@ -26,7 +26,8 @@ El código está organizado en los siguientes pasos:
 * Manipulación de imágenes: Se convierte la imagen a escala de grises, se redimensiona y se rota.
 
 * Transformaciones avanzadas: Se aplican rotaciones, transformaciones de perspectiva y máscaras de transparencia.
-# Por otro lado, aqui muestro ejemplos de las imágenes generadas con este código, y como la podemos encontrar (sus nombres):
+  
+## Por otro lado, aquí muestro ejemplos de las imágenes generadas con este código, y cómo las podemos encontrar (sus nombres):
 
 - Imagen en Blanco: ImagenEnBlanco.png
 
